@@ -12,9 +12,14 @@ export class HousesComponent implements OnInit {
 
   houses = HOUSES;
 
+  selectedHouse: House;
+  
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelect(house: House): void {
+    this.selectedHouse = house;
+  }
 }

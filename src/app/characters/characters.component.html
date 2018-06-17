@@ -1,6 +1,32 @@
-<h2>Characters</h2>
-<ul class="characters">
-    <li *ngFor="let character of characters">
-        <span class="badge">{{character.name}}</span> {{character.gender}}
-    </li>
-</ul>
+<div class="container" style="text-align:center">
+    <div class="row" style="text-align:center">
+        <div class="col-md-12" style="font-size:22px">Characters </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div class="row" style="text-align:center" *ngIf="characters != null && characters.length>0">
+        <div *ngFor="let character of characters" class="col-md-4">
+
+            <div class="panel panel-default" (click)="onSelect(character)">
+                <div class="panel-heading">{{character.name | uppercase}}</div>
+                <div class="panel-body">
+
+                    <p>{{character.culture}}</p>
+                </div>
+                <div class="panel-footer">{{character.born}}
+                    <br/>
+                    <!-- <br/><br/><a [routerLink]="['/blog',blog.blogId]" class="btn btn-primary">Read</a> -->
+
+                </div>
+
+            </div>
+
+            <br/>
+        </div>
+
+    </div>
+
+</div>
+

@@ -11,9 +11,15 @@ export class BooksComponent implements OnInit {
 
   books = BOOKS; //assigning the mock data to the books property
 
+  selectedBook: Book; //the book that was selected by the user
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(book: Book): void {
+    this.selectedBook = book;
   }
 
 }

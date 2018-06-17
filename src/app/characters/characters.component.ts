@@ -10,10 +10,16 @@ import { CHARACTERS } from './../mock-characters';
 export class CharactersComponent implements OnInit {
 
   characters = CHARACTERS; //assigning mock data to characters property
+
+  selectedCharacter: Character;
   
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(character: Character): void {
+    this.selectedCharacter = character;
   }
 
 }
