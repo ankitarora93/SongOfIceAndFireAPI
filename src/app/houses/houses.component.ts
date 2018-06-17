@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { House } from './../house';
 import { NullAstVisitor } from '@angular/compiler';
-import { HOUSES } from './../mock-houses';
+import { DataService } from './../data.service';
 
 @Component({
   selector: 'app-houses',
@@ -10,16 +10,21 @@ import { HOUSES } from './../mock-houses';
 })
 export class HousesComponent implements OnInit {
 
-  houses = HOUSES;
+  houses: House[];
 
   selectedHouse: House;
   
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.getHouses();
   }
 
   onSelect(house: House): void {
     this.selectedHouse = house;
+  }
+
+  getHouses(): void {
+    this.houses = this.dataService.getHouses();
   }
 }

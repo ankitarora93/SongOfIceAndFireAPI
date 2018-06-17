@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from './../book';
-import { BOOKS } from './../mock-books';
+import { DataService } from './../data.service';
 
 @Component({
   selector: 'app-books',
@@ -9,17 +9,22 @@ import { BOOKS } from './../mock-books';
 })
 export class BooksComponent implements OnInit {
 
-  books = BOOKS; //assigning the mock data to the books property
+  books: Book[];
 
   selectedBook: Book; //the book that was selected by the user
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.getBooks();
   }
 
   onSelect(book: Book): void {
     this.selectedBook = book;
+  }
+
+  getBooks(): void {
+    this.books = this.dataService.getBooks();
   }
 
 }
