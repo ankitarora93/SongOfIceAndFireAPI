@@ -1,3 +1,6 @@
-<h2>Book Details</h2>
-<div><span>name: </span>{{book.name}}</div>
-<div><span>pages: </span>{{book.numberOfPages}}</div>
+<h2>Books</h2>
+<ul class="books">
+    <li *ngFor="let book of books">
+        <span class="badge">{{book.name}}</span> {{book.author[0]}}
+    </li>
+</ul>

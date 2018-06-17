@@ -1,3 +1,6 @@
-<h2>House Details</h2>
-<div><span>name: </span>{{house.name}}</div>
-<div><span>region: </span>{{house.region}}</div>
+<h2>Houses</h2>
+<ul class="houses">
+    <li *ngFor="let house of houses">
+        <span class="badge">{{house.name}}</span> {{house.region}}
+    </li>
+</ul>

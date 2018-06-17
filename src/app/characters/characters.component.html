@@ -1,3 +1,6 @@
-<h2>Character Details</h2>
-<div><span>name: </span>{{character.name}}</div>
-<div><span>gender: </span>{{character.gender}}</div>
+<h2>Characters</h2>
+<ul class="characters">
+    <li *ngFor="let character of characters">
+        <span class="badge">{{character.name}}</span> {{character.gender}}
+    </li>
+</ul>
