@@ -24,7 +24,8 @@ export class CharactersComponent implements OnInit {
   }
 
   getCharacters(): void {
-    this.characters = this.dataService.getCharacters();
+    this.dataService.getCharacters()
+      .subscribe(characters => this.characters = characters);
   }
 
 }

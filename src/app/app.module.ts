@@ -8,6 +8,7 @@ import { HousesComponent } from './houses/houses.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { HouseDetailComponent } from './house-detail/house-detail.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CharacterDetailComponent } from './character-detail/character-detail.co
     CharacterDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

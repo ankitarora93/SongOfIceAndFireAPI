@@ -6,6 +6,7 @@ import { Character } from './character';
 
 export const CHARACTERS: Character[] = [
     {
+        "url": "https://anapioficeandfire.com/api/characters/583",
         "name": "Jon Snow",
         "gender": "Male",
         "culture": "Northmen",
@@ -44,6 +45,7 @@ export const CHARACTERS: Character[] = [
       }, 
 
       {
+        "url": "https://anapioficeandfire.com/api/characters/203",
         "name": "Margery",
         "gender": "Female",
         "culture": "Southerner",

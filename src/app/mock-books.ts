@@ -4,6 +4,7 @@ import { Book } from './book';
 
 export const BOOKS: Book[] = [
     {
+        "url": "https://anapioficeandfire.com/api/books/1",
         "name": "A Game of Thrones",
         "isbn": "978-0553103540",
         "authors": [
@@ -19,6 +20,7 @@ export const BOOKS: Book[] = [
     }, 
 
     {
+        "url": "https://anapioficeandfire.com/api/books/2",
         "name": "A Song of Ice and Fire",
         "isbn": "978-0553103532",
         "authors": [
@@ -34,6 +36,7 @@ export const BOOKS: Book[] = [
       }, 
 
       {
+        "url": "https://anapioficeandfire.com/api/books/3",
         "name": "A Game of Thrones",
         "isbn": "978-0553103540",
         "authors": [

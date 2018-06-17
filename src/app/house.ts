@@ -1,6 +1,7 @@
 import { Character } from './character';
 
 export class House {
+    url: string;
     name: string;
     region: string;
     coatOfArms: string;

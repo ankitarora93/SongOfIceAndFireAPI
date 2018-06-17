@@ -3,6 +3,7 @@
  */
 
 import { Injectable } from '@angular/core';
+import {Observable, of } from 'rxjs';
 
 import { Book } from './book';
 import { BOOKS } from './mock-books';
@@ -20,15 +21,15 @@ export class DataService {
 
   constructor() { }
 
-  getBooks(): Book[] {
-    return BOOKS;
+  getBooks(): Observable<Book[]> {
+    return of(BOOKS);
   }
 
-  getHouses(): House[] {
-    return HOUSES;
+  getHouses(): Observable<House[]> {
+    return of(HOUSES);
   }
 
-  getCharacters(): Character[] {
-    return CHARACTERS;
+  getCharacters(): Observable<Character[]> {
+    return of(CHARACTERS);
   }
 }

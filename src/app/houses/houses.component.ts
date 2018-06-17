@@ -25,6 +25,7 @@ export class HousesComponent implements OnInit {
   }
 
   getHouses(): void {
-    this.houses = this.dataService.getHouses();
+    this.dataService.getHouses()
+      .subscribe(houses => this.houses = houses);
   }
 }

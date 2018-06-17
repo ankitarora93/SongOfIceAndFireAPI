@@ -2,6 +2,7 @@ import { Book } from './book';
 import { House } from './house';
 
 export class Character {
+    url: string;
     name: string;
     gender: string;
     culture: string;

@@ -6,6 +6,7 @@ import { House } from './house';
 
 export const HOUSES: House[] = [
     {
+        "url": "https://anapioficeandfire.com/api/houses/378",
         "name": "House Targaryen of King's Landing",
         "region": "The Crownlands",
         "coatOfArms": "Sable, a dragon thrice-headed gules",
@@ -34,6 +35,7 @@ export const HOUSES: House[] = [
       },
 
       {
+        "url": "https://anapioficeandfire.com/api/houses/377",
         "name": "House Targaryen of King's Landing",
         "region": "The Crownlands",
         "coatOfArms": "Sable, a dragon thrice-headed gules",
