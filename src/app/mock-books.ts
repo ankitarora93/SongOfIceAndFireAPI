@@ -2,7 +2,7 @@
 
 import { Book } from './book';
 
-export const books: Book[] = [
+export const BOOKS: Book[] = [
     {
         "name": "A Game of Thrones",
         "isbn": "978-0553103540",

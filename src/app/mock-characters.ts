@@ -4,7 +4,7 @@
 
 import { Character } from './character';
 
-export const characters: Character[] = [
+export const CHARACTERS: Character[] = [
     {
         "name": "Jon Snow",
         "gender": "Male",
