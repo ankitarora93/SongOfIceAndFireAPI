@@ -13,7 +13,7 @@ import { DataService} from './../data.service';
 })
 export class HouseDetailComponent implements OnInit {
 
- @Input() house: House;
+ private house;
 
   constructor(private route: ActivatedRoute, private dataService: DataService, private location: Location) { }
 

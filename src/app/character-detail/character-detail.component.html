@@ -1,3 +1,42 @@
 <div *ngIf="character">
-  {{character.name}}
+  <b>Name: </b> {{character.name}}
+  <br />
+  <b>Gender: </b> {{character.gender}}
+  <br />
+  <b>Culture: </b> {{character.culture}}
+  <br />
+  <b>Died: </b> {{character.born}}
+  <br />
+  <b>Title: </b>
+  <span *ngFor="let title of character.titles">
+    {{title}}
+  </span>
+  <br />
+  <b>Aliases: </b>
+  <span *ngFor="let alias of character.aliases">
+    {{alias}}
+  </span>
+  <br />
+  <b>Father: </b> {{character.father}}
+  <br />
+  <b>Mother: </b> {{character.mother}}
+  <br />
+  <b>Spouse: </b> {{character.spouse}}
+  <br />
+  <b>Book(s): </b>
+  <span *ngFor="let book of books">
+    {{book}},
+  </span>
+  <br />
+  <b>Allegiance(s): </b>
+  <span *ngFor="let allegiance of allegiances">
+    {{allegiance}},
+  </span>
+  <br />
+  <b>TV Series: </b>
+  <span *ngFor="let item of character.tvSeries">
+    {{item}}
+  </span>
+  <br />
+  <b>Played by: </b> {{character.playedBy}}
 </div>

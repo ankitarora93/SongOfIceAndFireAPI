@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class CharactersComponent implements OnInit {
 
-  characters: Character[]; //assigning mock data to characters property
+  private characters; //will be populated from the data from the api
 
-  selectedCharacter: Character;
+  private selectedCharacter;
   
   constructor(private dataService: DataService, private router: Router) { }
 
@@ -20,7 +20,7 @@ export class CharactersComponent implements OnInit {
     this.getCharacters();
   }
 
-  getId(character: Character) {
+  getId(character: any) {
     let url = character.url;
     let index = url.lastIndexOf('/');
     let id = url.substring(index + 1);
@@ -28,7 +28,7 @@ export class CharactersComponent implements OnInit {
     return id;
   }
 
-  onSelect(character: Character): void {
+  onSelect(character: any): void {
     this.selectedCharacter = character;
     let id = this.getId(this.selectedCharacter);
     this.router.navigateByUrl('/characterDetail/' + id);

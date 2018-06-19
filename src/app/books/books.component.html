@@ -10,14 +10,14 @@
         <div *ngFor="let book of books" class="col-md-4">
 
             <div class="panel panel-default" (click)="onSelect(book)">
-                <div class="panel-heading">{{book.name | uppercase}}</div>
+                <div class="panel-heading"><b>Book Name:</b> {{book.name | uppercase}}</div>
                 <div class="panel-body">
 
-                    <p>{{book.publisher}}</p>
+                    <p><b>Book Name:</b> {{book.publisher}}</p>
                 </div>
-                <div class="panel-footer">{{book.numberOfPages}}
+                <div class="panel-footer"><b>Pages: </b>{{book.numberOfPages}}
                     <br/>
-                    <!-- <br/><br/><a [routerLink]="['/blog',blog.blogId]" class="btn btn-primary">Read</a> -->
+                    <br/><br/><a (click)="onSelect(book)" class="btn btn-primary">Details</a>
 
                 </div>
 

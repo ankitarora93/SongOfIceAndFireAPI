@@ -10,14 +10,21 @@
         <div *ngFor="let character of characters" class="col-md-4">
 
             <div class="panel panel-default" (click)="onSelect(character)">
-                <div class="panel-heading">{{character.name | uppercase}}</div>
+                <div class="panel-heading">
+                        <b>Character Name:</b>
+                    <i *ngIf="character.name==''">Not Known</i>
+                    {{character.name | uppercase}}</div>
                 <div class="panel-body">
-
+                        <b>Character Culture:</b>
+                    <i *ngIf="character.culture==''">Not Known</i>
                     <p>{{character.culture}}</p>
                 </div>
-                <div class="panel-footer">{{character.born}}
+                <div class="panel-footer">
+                        <b>Character Born:</b>
+                    <i *ngIf="character.born==''">Not Known</i>
+                    {{character.born}}
                     <br/>
-                    <!-- <br/><br/><a [routerLink]="['/blog',blog.blogId]" class="btn btn-primary">Read</a> -->
+                    <br/><br/><a (click)="onSelect(character)" class="btn btn-primary">Details</a>
 
                 </div>
 

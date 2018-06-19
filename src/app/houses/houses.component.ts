@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 })
 export class HousesComponent implements OnInit {
 
-  houses: House[];
+  private houses;
 
-  selectedHouse: House;
+  private selectedHouse;
   
   constructor(private dataService: DataService, private router: Router) { }
 
@@ -21,7 +21,7 @@ export class HousesComponent implements OnInit {
     this.getHouses();
   }
 
-  getId(house: House) {
+  getId(house: any) {
     let url = house.url;
     let index = url.lastIndexOf('/');
     let id = url.substring(index + 1);
@@ -29,7 +29,7 @@ export class HousesComponent implements OnInit {
     return id;
   }
 
-  onSelect(house: House): void {
+  onSelect(house: any): void {
     this.selectedHouse = house;
     let id = this.getId(this.selectedHouse);
     this.router.navigateByUrl('/houseDetail/'+id);

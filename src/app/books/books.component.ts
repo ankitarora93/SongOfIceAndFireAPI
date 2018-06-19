@@ -12,7 +12,7 @@ export class BooksComponent implements OnInit {
 
   private books;
 
-  selectedBook: Book; //the book that was selected by the user
+  private selectedBook; //the book that was selected by the user
 
   constructor(private dataService: DataService, private router: Router) { }
 
@@ -20,7 +20,7 @@ export class BooksComponent implements OnInit {
     this.getBooks();
   }
 
-  getId(book: Book): string {
+  getId(book: any): string {
     let url: string = book.url;
     let index = url.lastIndexOf('/');
     let id = url.substr(index + 1);
@@ -28,7 +28,7 @@ export class BooksComponent implements OnInit {
     return id;
   }
 
-  onSelect(book: Book): void {
+  onSelect(book: any): void {
     this.selectedBook = book;
     let id = this.getId(this.selectedBook);
     this.router.navigateByUrl('/bookDetail/'+id);

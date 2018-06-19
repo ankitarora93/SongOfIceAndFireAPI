@@ -10,14 +10,21 @@
         <div *ngFor="let house of houses" class="col-md-4">
 
             <div class="panel panel-default" (click)="onSelect(house)">
-                <div class="panel-heading">{{house.name | uppercase}}</div>
+                <div class="panel-heading">
+                    <b>House Name:</b>
+                    {{house.name | uppercase}}</div>
                 <div class="panel-body">
 
-                    <p>{{house.region}}</p>
+                    <p>
+                            <b>House Region:</b>
+                        {{house.region}}</p>
                 </div>
-                <div class="panel-footer">{{house.words}}
+                <div class="panel-footer">
+                        <b>House Words:</b>
+                    <i *ngIf="house.words==''">Not Known</i>
+                    {{house.words}}
                     <br/>
-                    <!-- <br/><br/><a [routerLink]="['/blog',blog.blogId]" class="btn btn-primary">Read</a> -->
+                    <br/><br/><a (click)="onSelect(house)" class="btn btn-primary">Details</a>
 
                 </div>
 
