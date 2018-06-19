@@ -1,4 +1,4 @@
-<!-- Book details -->
+<!-- Book details
 <div *ngIf="book">
   <b>Book Name: </b>{{book.name}} <br />
   <b>Book ISBN: </b>{{book.isbn}} <br />
@@ -14,4 +14,40 @@
     {{character}},
   </span>
   
+</div> -->
+<br />
+<div class="panel panel-default" (click)="onSelect(book)">
+  <div class="panel-heading">
+    <b> {{book.name | uppercase}}</b>
+  </div>
+  <div class="panel-body" *ngIf="book">
+
+    <b>Book Name: </b>{{book.name}}
+    <br />
+    <b>Book ISBN: </b>{{book.isbn}}
+    <br />
+    <b>Book Author(s): </b>
+    <span *ngFor="let author of book.authors">
+      {{author}},
+    </span>
+    <br />
+    <b>Number of Pages: </b>{{book.numberOfPages}}
+    <br />
+    <b>Publisher: </b> {{book.publisher}}
+    <br />
+    <b>Country: </b> {{book.country}}
+    <br />
+    <b>Media Type: </b> {{book.mediaType}}
+    <br />
+    <b>Released: </b> {{book.released}}
+    <br />
+    <b>Characters: </b>
+    <span *ngFor="let character of characters">
+      {{character}},
+    </span>
+  </div>
+  <div class="panel-footer">
+    <b>Note: Missing values means that no data was available</b>
+  </div>
+
 </div>

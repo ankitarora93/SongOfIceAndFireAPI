@@ -1,32 +1,44 @@
-<div *ngIf="house">
-  <b>Name: </b>{{house.name}}
-  <br />
-  <b>Region: </b>{{house.region}}
-  <br />
-  <b>Coat of Arms: </b>{{house.coatOfArms}}
-  <br />
-  <b>Words: </b>{{house.words}}
-  <br />
-  <b>Title(s): </b>
-  <span *ngFor="let title of house.titles">
-    {{title}},
-  </span>
-  <br />
-  <b>Seats: </b>
-  <span *ngFor="let seat of house.seats">
-    {{seat}},
-  </span>
-  <br />
-  <b>Heir: </b>{{house.heir}}
-  <br />
-  <b>Overlord: </b>{{house.overlord}}
-  <br />
-  <b>Founded: </b>{{house.founded}}
-  <br />
-  <b>Founder: </b>{{house.founder}}
-  <br />
-  <b>Sworn Members: </b>
-  <span *ngFor="let sMem of sMemebers">
-    {{sMem}},
-  </span>
+<br />
+<div class="panel panel-default" (click)="onSelect(character)">
+  <div class="panel-heading">
+    <span *ngIf="house.name==''">House name not known</span>
+    <b>{{house.name | uppercase}}</b>
+  </div>
+  <div class="panel-body">
+    <b>Name: </b>{{house.name}}
+    <br />
+    <b>Region: </b>{{house.region}}
+    <br />
+    <b>Coat of Arms: </b>{{house.coatOfArms}}
+    <br />
+    <b>Words: </b>{{house.words}}
+    <br />
+    <b>Title(s): </b>
+    <span *ngFor="let title of house.titles">
+      {{title}},
+    </span>
+    <br />
+    <b>Seats: </b>
+    <span *ngFor="let seat of house.seats">
+      {{seat}},
+    </span>
+    <br />
+    <b>Heir: </b>{{house.heir}}
+    <br />
+    <b>Overlord: </b>{{house.overlord}}
+    <br />
+    <b>Founded: </b>{{house.founded}}
+    <br />
+    <b>Founder: </b>{{house.founder}}
+    <br />
+    <b>Sworn Members: </b>
+    <span *ngFor="let sMem of sMemebers">
+      {{sMem}},
+    </span>
+  </div>
+  <div class="panel-footer">
+    <b>Note: Missing values means data was not available.</b>
+
+  </div>
+
 </div>

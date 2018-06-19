@@ -1,10 +1,14 @@
-<h1 style="text-align: center">{{title}}</h1>
-<nav>
-    <a routerLink="/books">Books</a>
-    <a routerLink="/characters">Characters</a>
-    <a routerLink="/houses">Houses</a>
-</nav>
+<h1 style="text-align: center" class="component" ><u>{{title}}</u></h1>
+<br /><br />
+<div class="container" style="text-align:center">
+        <div class="row" style="text-align:center">
+            <div class="col-md-4"><a routerLink="/books">Books</a></div>
+            <div class="col-md-4"><a routerLink="/characters">Characters</a></div>
+            <div class="col-md-4"><a routerLink="/houses">Houses</a></div>
+        </div>
+    </div>
 <router-outlet></router-outlet>
 <!-- <app-books></app-books>
 <app-characters></app-characters>
 <app-houses></app-houses> -->
+
