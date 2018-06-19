@@ -12,8 +12,8 @@ import { DataService } from './../data.service';
 })
 export class BookDetailComponent implements OnInit {
 
-  private book;
-  private characters = [];
+  book;
+  characters = [];
 
   constructor(private route: ActivatedRoute, private dataService: DataService, private location: Location) { }
 

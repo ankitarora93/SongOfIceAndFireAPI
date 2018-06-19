@@ -12,9 +12,9 @@ import { DataService } from './../data.service';
 })
 export class CharacterDetailComponent implements OnInit {
 
-  private character;
-  private books = [];
-  private allegiances = [];
+  character;
+  books = [];
+  allegiances = [];
 
   constructor(private route: ActivatedRoute, private dataService: DataService, private location: Location) { }
 

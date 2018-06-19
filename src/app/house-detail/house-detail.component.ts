@@ -13,8 +13,8 @@ import { DataService } from './../data.service';
 })
 export class HouseDetailComponent implements OnInit {
 
-  private house;
-  private sMemebers = []; 
+  house;
+  sMemebers = []; 
 
   constructor(private route: ActivatedRoute, private dataService: DataService, private location: Location) { }
 

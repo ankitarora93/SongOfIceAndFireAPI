@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class CharactersComponent implements OnInit {
 
-  private characters; //will be populated from the data from the api
+  characters; //will be populated from the data from the api
 
-  private selectedCharacter;
+  selectedCharacter;
   
   constructor(private dataService: DataService, private router: Router) { }
 

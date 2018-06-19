@@ -9,7 +9,7 @@
     <div class="row" style="text-align:center" *ngIf="books != null && books.length>0">
         <div *ngFor="let book of books" class="col-md-4">
 
-            <div class="panel panel-default" (click)="onSelect(book)">
+            <div class="panel panel-default">
                 <div class="panel-heading"><b>Book Name:</b> {{book.name | uppercase}}</div>
                 <div class="panel-body">
 

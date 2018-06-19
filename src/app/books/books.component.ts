@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class BooksComponent implements OnInit {
 
-  private books;
+  books;
 
-  private selectedBook; //the book that was selected by the user
+  selectedBook; //the book that was selected by the user
 
   constructor(private dataService: DataService, private router: Router) { }
 

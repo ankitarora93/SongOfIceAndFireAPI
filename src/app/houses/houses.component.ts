@@ -11,9 +11,9 @@ import { Router } from '@angular/router';
 })
 export class HousesComponent implements OnInit {
 
-  private houses;
+  houses;
 
-  private selectedHouse;
+  selectedHouse;
   
   constructor(private dataService: DataService, private router: Router) { }
 
