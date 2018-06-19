@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from './../book';
 import { DataService } from './../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-books',
@@ -9,18 +10,28 @@ import { DataService } from './../data.service';
 })
 export class BooksComponent implements OnInit {
 
-  books: Book[];
+  private books;
 
   selectedBook: Book; //the book that was selected by the user
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit() {
     this.getBooks();
   }
 
+  getId(book: Book): string {
+    let url: string = book.url;
+    let index = url.lastIndexOf('/');
+    let id = url.substr(index + 1);
+    
+    return id;
+  }
+
   onSelect(book: Book): void {
     this.selectedBook = book;
+    let id = this.getId(this.selectedBook);
+    this.router.navigateByUrl('/bookDetail/'+id);
   }
 
   getBooks(): void {
