@@ -1,3 +1,32 @@
 <div *ngIf="house">
-  {{house.name}}
+  <b>Name: </b>{{house.name}}
+  <br />
+  <b>Region: </b>{{house.region}}
+  <br />
+  <b>Coat of Arms: </b>{{house.coatOfArms}}
+  <br />
+  <b>Words: </b>{{house.words}}
+  <br />
+  <b>Title(s): </b>
+  <span *ngFor="let title of house.titles">
+    {{title}},
+  </span>
+  <br />
+  <b>Seats: </b>
+  <span *ngFor="let seat of house.seats">
+    {{seat}},
+  </span>
+  <br />
+  <b>Heir: </b>{{house.heir}}
+  <br />
+  <b>Overlord: </b>{{house.overlord}}
+  <br />
+  <b>Founded: </b>{{house.founded}}
+  <br />
+  <b>Founder: </b>{{house.founder}}
+  <br />
+  <b>Sworn Members: </b>
+  <span *ngFor="let sMem of sMemebers">
+    {{sMem}},
+  </span>
 </div>

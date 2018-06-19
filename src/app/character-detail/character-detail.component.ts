@@ -43,7 +43,10 @@ export class CharacterDetailComponent implements OnInit {
       let bookDet;
       let character = this.dataService.getBookDetail(id)
         .subscribe(book => 
-          {bookDet = book; this.books.push(bookDet.name)});
+          {
+            bookDet = book; 
+            this.books.push(bookDet.name)
+          });
     }
   }
 
